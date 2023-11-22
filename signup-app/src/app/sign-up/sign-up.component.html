@@ -1,0 +1,50 @@
+<main>
+    <section aria-labelledby="signup-form">
+        <h2 id="signup-form">Please Register with below details:</h2>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="input-container">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>    
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div>
+                    <label for="email" id="email-label">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div>
+                    <label for="password" id="password-label">Password:</label>
+                    <input type="password" class="form-control" id="password" formControlName="password">    
+                </div>
+               
+                <div class="error-class" *ngIf="signupForm.get('password')?.errors && signupForm.get('password')?.touched">
+                  <small class="text-error" *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.errors?.['required']">
+                    Password is required.
+                  </small>                      
+                  <small class="text-error" *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.errors?.['minlength']">
+                    Password must be at least 8 characters.
+                  </small>
+                  <small class="text-error" *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.errors?.['passwordCase']">
+                    Password must contain both upper and lower case letters.
+                  </small>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </section>
+</main>

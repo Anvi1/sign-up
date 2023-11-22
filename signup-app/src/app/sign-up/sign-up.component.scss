@@ -1,0 +1,34 @@
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+label {
+    margin-right: 1rem;
+}
+
+#email-label {
+    margin-right: 3rem;
+}
+
+#password-label {
+    margin-right: 1.5rem;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-class {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-error {
+    color: red; /* Or any color that you prefer for indicating danger or errors */
+    font-size: 0.875rem; /* Optional: Adjust the font size as needed */
+    margin-top: 0.25rem; /* Optional: Provides some space above the message */
+}

@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --main-margin: 1rem;
+  --main-padding: 1rem;
+  --main-border: 2px solid grey;
+}
