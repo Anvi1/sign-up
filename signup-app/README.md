@@ -17,7 +17,7 @@
 
 3. Post request is performed where firstName, lastName and email id is sent in request bosy excluding password. This is done as there is no confirmation about the server side encryption for password.
 
-4. Reactive Angular form is used to build singn up form.
+4. Reactive Angular form is used to build singn up form. Used angular forms built in email validator for validating email field. Password is validated through a custom validator. This validator could also be added in separate utils folder.
 
 5. Application is made as responsive as possible without using any external libraries
 
